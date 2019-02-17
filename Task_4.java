@@ -22,16 +22,16 @@ public class Task_4 {
 
 		for (int i = 0; i < array.length - 1; i++) {
 			if (array[i] > array[i + 1]) {
-				countUp = countUp + 1;
+				countDown++;
 			}
 			if (array[i] < array[i + 1]) {
-				countDown = countDown - 1;
+				countUp--;
 			}
 		}
 
-		if (countUp == 3) {
+		if (countDown == 3) {
 			System.out.println("The sequence is decreasing");
-		} else if (countDown == -3) {
+		} else if (countUp == -3) {
 			System.out.println("The sequence is increasing");
 		} else {
 			System.out.println("The sequence is NOT increasing or decreasing");
